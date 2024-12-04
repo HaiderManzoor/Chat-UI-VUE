@@ -1,4 +1,4 @@
-# Chat UI
+# 🤖 Chat UI
 
 <p align="left">
   <a href="https://vuejs.org/">
@@ -22,29 +22,23 @@
   </a>
 </p>
 
-The UI of Chat is becoming increasingly complex, often encompassing an entire front-end project along with deployment solutions.
+The **Chat UI** project is a minimalist and efficient way to create a fully functional chatbot interface. It integrates with various backend solutions, including OpenAI, HuggingFace, and more, all with minimal setup. This repository allows for quick experimentation with chatbot functionality while maintaining simplicity.
 
-This repository aims to construct the entire front-end UI using a single HTML file, aiming for a minimalist approach to create a chatbot.
+---
 
-By simplifying the structure and key functions, developers can quickly set up and experiment with a functional chatbot, adhering to a slimmed-down project design philosophy.
+## 🚀 Features
 
-## Features
+- **OpenAI-format compatibility**: Easily integrates with `HuggingFace`, `vLLM`, and more backends.
+- **Multiple response formats**: Supports `OpenAI`, `Cloudflare AI`, and `plain text` responses without additional configuration.
+- **Custom backend support**: Configure your own endpoints for universal chatbot usage across projects.
+- **Chat history download**: Save chat history for future reference or testing.
+- **Multimodal support**: Send image inputs for vision models.
+- **Markdown support**: Toggle between `original format` and `Markdown` display.
+- **Internationalization**: Full support for localization (`i18n`) to reach a wider audience.
 
-- Supports OpenAI-format requests, enabling compatibility with various backends such as `HuggingFace Text Generation Inference (TGI)`, `vLLM`, etc.
+---
 
-- Automatically supports multiple response formats without additional configuration, including standard `OpenAI` response formats, `Cloudflare AI` response formats, and `plain text` responses
-
-- Support various `backend endpoints through custom configurations`, providing any project with a universal frontend chatbot
-
-- Support the `download of chat history`, interrupt the current generation, and repeat the previous generation to quickly test the backend inference capabilities
-
-- Inquiries with image inputs can be made using `multimodal vision models`
-
-- Support for toggling between `original format` and `Markdown format` display
-
-- Support internationalization and localization `i18n`
-
-## How to use
+## 📥 How to Use
 
 #### Option 1: Goto demo [AIQL](https://chat.aiql.com/)
 > The demo will use `Llama-3.2` by default, image upload is only supported for vision models
@@ -72,32 +66,35 @@ docker run -p 8080:8080 -d aiql/chat-ui
 #### Option 7: Deploy within [K8s](#k8s-section)
 
 
-## How to config
+## ⚙️ How to Configure
 
-By default, the Chatbot will use API format as OpenAI ChatGPT. 
+By default, the Chat UI uses OpenAI's API format. You can easily change the API to other vendors by configuring the API Key and Endpoint.
 
-You can insert your OpenAI `API Key` and change the `Endpoint` in configuration to use API from any other vendors
+1. **Download the configuration template** from the example folder.
+2. **Insert your own API Key** for quick configuration.
 
-You can also download the config template from [example](./example/config) and insert your `API Key`, then use it for quick configuration
+---
 
-## Trouble Shooting
+## 🛠️ Troubleshooting
 
-If you're experiencing issues opening the page and a simple refresh isn't resolving the issue, please take the following steps:
+If you're having trouble accessing the page or experiencing issues, try the following:
 
-### Reset Interface Configuration
-1. Click `Refresh` icon on the upper right of `Interface Configuration`
+### 1. **Reset Interface Configuration**
+- Click the `Refresh` icon in the upper-right corner of the **Interface Configuration**.
 
-### Reset All Configuration
-1. Click hidden botton on the right side of the index page
-2. Click `Reset All Config` icon
+### 2. **Reset All Configuration**
+- Click the hidden button on the right side of the index page.
+- Click the `Reset All Config` icon.
 
-### Reset Cache
-1. Right-click your browser page and go to the `Network` section.
-2. Right-click on section table and clear your browser's cache and cookies to ensure you have the latest version of the page.
-3. Additionally, inspect the browser's Network section to see which resources are failing to load due to your location. This will provide you with more specific information about the issue.
+### 3. **Clear Cache**
+- Right-click on the page and open the `Network` section.
+- Clear your browser's cache and cookies to ensure you're using the latest version.
+- Check the browser's **Network** section to find any failing resources and see if the issue is location-specific.
+
+---
 
 <a id="k8s-section"></a>
-## K8s
+## Kubernetes (K8s) Deployment
 
 1. Introduce the image as sidecar container
 ```yaml
@@ -151,6 +148,15 @@ spec:
             port:
               number: 8080
 ```
+---
 
 ## Demo
-![](./demo.gif)
+![demo](https://github.com/user-attachments/assets/5825a8e7-0b93-4f18-bfa2-1128b9081e80)
+
+---
+
+## 👤 Author
+
+**Author**: Haider Manzoor
+
+---
